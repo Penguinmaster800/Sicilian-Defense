@@ -1,0 +1,82 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1mjh3ssa2vvj"]
+
+[ext_resource type="Script" path="res://Scenes/Menus/play_button.gd" id="1_pu0sq"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_k1pyw"]
+
+[sub_resource type="Theme" id="Theme_tqswj"]
+default_font_size = 80
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_330yf"]
+size = Vector2(500, 200)
+
+[node name="OpeningMenu" type="CanvasLayer"]
+
+[node name="PlaceholderBackground" type="TextureRect" parent="."]
+modulate = Color(9.14484e-07, 0.392265, 0.584359, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = 4.0
+offset_right = 12.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_k1pyw")
+
+[node name="Title" type="Control" parent="."]
+layout_mode = 3
+anchor_left = 0.2
+anchor_top = 0.15
+anchor_right = 0.8
+anchor_bottom = 0.25
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 6.0
+offset_bottom = 5.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Title"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_tqswj")
+bbcode_enabled = true
+text = "[center]Sicillian Defense"
+
+[node name="PlayButton" type="TextureButton" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("PlaceholderTexture2D_330yf")
+script = ExtResource("1_pu0sq")
+
+[node name="UpgradeButton" type="TextureButton" parent="."]
+modulate = Color(0.254902, 0.972549, 0.109804, 1)
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.65
+anchor_right = 0.5
+anchor_bottom = 0.65
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = SubResource("PlaceholderTexture2D_330yf")
+script = ExtResource("1_pu0sq")

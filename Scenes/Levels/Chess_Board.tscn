@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0ilrjyibwu6u"]
+
+[ext_resource type="Texture2D" uid="uid://bj6mmxrlxj3q4" path="res://Graphics/Placeholders/Map/ChessBoard.png" id="1_8vpt1"]
+[ext_resource type="Texture2D" uid="uid://c785oy1utiu6s" path="res://Graphics/Placeholders/Map/Placeholder Selection Tilemap Set.png" id="2_1vfy2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_urdhm"]
+texture = ExtResource("2_1vfy2")
+texture_region_size = Vector2i(180, 180)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_pr707"]
+tile_size = Vector2i(180, 180)
+sources/3 = SubResource("TileSetAtlasSource_urdhm")
+
+[node name="ChessBoard" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.56786, 2.56786)
+texture = ExtResource("1_8vpt1")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_pr707")
+rendering_quadrant_size = 1
+format = 2
+layer_0/tile_data = PackedInt32Array(-196612, 131075, 0)

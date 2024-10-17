@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bn6kce4e2awx4"]
+
+[ext_resource type="Script" path="res://Scenes/Towers/base_tower.gd" id="1_qa8ix"]
+
+[node name="Base-tower" type="CharacterBody2D"]
+script = ExtResource("1_qa8ix")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]

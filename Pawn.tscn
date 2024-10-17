@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://73ua8natoh7l"]
+
+[ext_resource type="PackedScene" uid="uid://bn6kce4e2awx4" path="res://Scenes/Towers/Base-Tower.tscn" id="1_j8qya"]
+[ext_resource type="Texture2D" uid="uid://m2eji7ans82c" path="res://Graphics/Placeholders/Towers/Placeholder Pawn.png" id="2_y4kmt"]
+
+[node name="Pawn" instance=ExtResource("1_j8qya")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_y4kmt")
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+polygon = PackedVector2Array(51, -103, 63, 93, -74, 95, -67, -103)
